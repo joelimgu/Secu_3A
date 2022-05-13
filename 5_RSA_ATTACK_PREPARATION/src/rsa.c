@@ -85,6 +85,7 @@ long long rsa_modExp(long long b, long long e, long long m)
             return -1;
       }
       b = b % m;
+      // fait aue le calcul soit pas a temps cte
       while ( e > 0){
             product = modmult(product, b, m);
             e--;

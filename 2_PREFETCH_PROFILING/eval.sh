@@ -11,7 +11,7 @@ do
 		> part.awk
 		for i in {1..100}
 		do
-			./profiling $? $? >> part.awk #Replace ? by the variable name (i, j or k) 
+			./profiling $j $k >> part.awk #Replace ? by the variable name (i, j or k) 
 		done
 		mean_float=$(awk '{ total += $0 } END {  print total/NR }' part.awk)
 		mean_int=${mean_float%.*}
