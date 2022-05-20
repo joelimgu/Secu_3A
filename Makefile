@@ -20,7 +20,7 @@ HOST_CXXFLAGS=-O2 -Wall -std=c++11
 # =====================================================================================
 # Cross compiler and flags.
 # -------------------------------------------------------------------------------------
-TRIPLE	?= /opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi
+TRIPLE	?= ./gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi
 XCC      := ${TRIPLE}-gcc
 XAS      := ${TRIPLE}-gcc
 XLD      := ${TRIPLE}-gcc

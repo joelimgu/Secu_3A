@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri May 20 16:14:14 2022
+# Make data base, printed on Fri May 20 17:28:43 2022
 
 # Variables
 
@@ -20,6 +20,7 @@ DESKTOP_SESSION = mate
 OPAM_SWITCH_PREFIX = /usr/local/insa/shared/opam/default
 # default
 .SHELLFLAGS := -c
+ 
 # environment
 OCAML_TOPLEVEL_PATH = /usr/local/insa/shared/opam/default/lib/toplevel
 # environment
@@ -95,13 +96,13 @@ PATH = /usr/local/insa/shared/opam/default/bin:/usr/local/insa/lustre-v4-XX-0-li
 # makefile (from 'Makefile', line 15)
 HOST_CC = gcc
 # makefile (from 'Makefile', line 26)
-XLD := /opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc
+XLD := ./gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc
 # makefile (from 'Makefile', line 59)
 COMMON_HEADERS := target_prog/io.h target_prog/test_vectors.h target_prog/DWT.h target_prog/hal.h target_prog/MT_RNG.h
 # environment
 GPG_AGENT_INFO = /run/user/25012/gnupg/S.gpg-agent:0:1
 # makefile (from 'Makefile', line 24)
-XCC := /opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc
+XCC := ./gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc
 # environment
 SESSION_MANAGER = local/insa-20154:@/tmp/.ICE-unix/1344,unix/insa-20154:/tmp/.ICE-unix/1344
 # makefile (from 'Makefile', line 35)
@@ -257,7 +258,7 @@ GRC_XTERM_EXECUTABLE = /usr/bin/xterm
 # makefile (from 'Makefile', line 40)
 XCPPFLAGS := -I. -DDEBUG -DSTM32F303xC -DSTM32F3 -DSTM32 -DHAL_TYPE=HAL_stm32f3 -DPLATFORM=CW308_STM32F3 -DF_CPU=7372800UL -DSS_VER_2_0=2 -DSS_VER_1_1=1 -DSS_VER_1_0=0
 # makefile (from 'Makefile', line 27)
-XOBJDUMP := /opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-objdump
+XOBJDUMP := ./gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-objdump
 # environment
 GDK_BACKEND = x11
 # makefile (from 'Makefile', line 17)
@@ -267,7 +268,7 @@ PLATFORM_LDSCRIPT = target_prog/${PLATFORM}/LinkerScript.ld
 # automatic
 +F = $(notdir $+)
 # makefile (from 'Makefile', line 25)
-XAS := /opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc
+XAS := ./gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc
 # environment
 QT_ACCESSIBILITY = 1
 # makefile (from 'Makefile', line 42)
@@ -287,7 +288,7 @@ XOBJDIR := build/stm32f3/hardened-digicode
 # makefile (from 'Makefile', line 54)
 FIRMWARE_OBJECTS := build/stm32f3/hardened-digicode/main.o build/stm32f3/hardened-digicode/verify_code.o
 # makefile (from 'Makefile', line 23)
-TRIPLE = /opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi
+TRIPLE = ./gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi
 # environment
 LC_ALL = C
 # environment
@@ -295,10 +296,10 @@ LUSTRE_INSTALL = /usr/local/insa/lustre-v4-XX-0-linux64
 # environment
 QT4_IM_MODULE = ibus
 # automatic
- 
 ^F = $(notdir $^)
+ 
 # makefile (from 'Makefile', line 28)
-XOBJCOPY := /opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-objcopy
+XOBJCOPY := ./gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-objcopy
 # default
 SUFFIXES := 
 # environment
@@ -328,12 +329,12 @@ VSCODE_PID = 7935
 
 # Directories
 
-# . (device 62, inode 2951780249): 14 files, no impossibilities.
+# . (device 62, inode 2951780249): 17 files, no impossibilities.
 # firmware/hardened-digicode (device 62, inode 2883526896): 4 files, no impossibilities.
 # target_prog (device 62, inode 2883526899): 16 files, no impossibilities.
 # target_prog/stm32f3 (device 62, inode 2706246835): No files, no impossibilities so far.
 
-# 34 files, no impossibilities in 4 directories.
+# 37 files, no impossibilities in 4 directories.
 
 # Implicit Rules
 
@@ -420,7 +421,7 @@ build/stm32f3/hardened-digicode/io.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-01-10 20:49:42
+#  Last modified 2022-05-20 17:08:38.118614
 #  File has been updated.
 #  Successfully updated.
 
@@ -549,12 +550,12 @@ build/stm32f3/hardened-digicode/verify_code.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 68 / storage = 1218 B / avg = 17 B
-# current buf: size = 8162 B / used = 1218 B / count = 68 / avg = 17 B
+# strcache buffers: 1 (0) / strings = 71 / storage = 1269 B / avg = 17 B
+# current buf: size = 8162 B / used = 1269 B / count = 71 / avg = 17 B
 
-# strcache performance: lookups = 104 / hit rate = 34%
+# strcache performance: lookups = 107 / hit rate = 33%
 # hash-table stats:
-# Load=68/8192=1%, Rehash=0, Collisions=3/104=3%
-# Finished Make data base on Fri May 20 16:14:14 2022
+# Load=71/8192=1%, Rehash=0, Collisions=3/107=3%
+# Finished Make data base on Fri May 20 17:28:43 2022
 
  
