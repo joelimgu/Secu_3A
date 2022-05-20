@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri May 13 15:17:07 2022
+# Make data base, printed on Fri May 20 16:14:14 2022
 
 # Variables
 
@@ -24,10 +24,14 @@ OPAM_SWITCH_PREFIX = /usr/local/insa/shared/opam/default
 OCAML_TOPLEVEL_PATH = /usr/local/insa/shared/opam/default/lib/toplevel
 # environment
 XDG_SESSION_CLASS = user
+# makefile (from 'Makefile', line 34)
+PLATFORM_SRCS := stm32f3_hal.c stm32f3_hal_lowlevel.c stm32f3_sysmem.c
 # environment
 XDG_SESSION_TYPE = x11
 # environment
 VSCODE_LOG_NATIVE = false
+# makefile (from 'Makefile', line 6)
+TARGET = stm32f3
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -43,21 +47,21 @@ CURDIR := /home/imbergam/Bureau/3A/Secu
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{"*":"fr"},"_languagePackId":"25fe6a3290ec415596628d4afc87a88c.fr","_translationsConfigFile":"/home/imbergam/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr/tcf.json","_cacheRoot":"/home/imbergam/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr","_resolvedLanguagePackCoreLocation":"/home/imbergam/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr/da15b6fd3ef856477bf6f4fb29ba1b7af717770d","_corruptedFile":"/home/imbergam/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr/corrupted.info","_languagePackSupport":true}
+VTE_VERSION = 6003
 # environment
-_ = /usr/share/code/code
+VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{"*":"fr"},"_languagePackId":"25fe6a3290ec415596628d4afc87a88c.fr","_translationsConfigFile":"/home/imbergam/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr/tcf.json","_cacheRoot":"/home/imbergam/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr","_resolvedLanguagePackCoreLocation":"/home/imbergam/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5","_corruptedFile":"/home/imbergam/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr/corrupted.info","_languagePackSupport":true}
+# environment
+_ = /usr/bin/code
 # environment
 QT_AUTO_SCREEN_SCALE_FACTOR = 0
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-mate:/etc/xdg
 # environment
 GTK_OVERLAY_SCROLLING = 0
-# makefile
-MAKEFILE_LIST := 
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
 # automatic
 @F = $(notdir $@)
-# environment
-GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -68,32 +72,58 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/25012/bus
 VSCODE_VERBOSE_LOGGING = true
 # environment
 QT_SCALE_FACTOR = 1
+# makefile (from 'Makefile', line 47)
+XEXEDIR := build/stm32f3/hardened-digicode
+# makefile (from 'Makefile', line 51)
+FIRMWARE_SRCS = $(patsubst firmware/${FIRMWARE}/%, % , $(wildcard firmware/${FIRMWARE}/*.c))
 # environment
 CLUTTER_IM_MODULE = ibus
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/25012/vscode-ipc-72305e3a-8792-43bd-b8a1-506368b6ec9a.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/25012/vscode-ipc-cadf26ca-ab79-4806-b257-ed6ef9383c9a.sock
 # environment
-VSCODE_CWD = /home/imbergam
+VSCODE_CWD = /home/imbergam/Bureau/3A/Secu
+# makefile (from 'Makefile', line 56)
+FIRMWARE_HEX := bin/hardened-digicode.hex
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_25012_3uoNkD
+KRB5CCNAME = FILE:/tmp/krb5cc_25012_lRXxh2
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /usr/local/insa/shared/opam/default/bin:/usr/local/insa/shared/opam/default/bin:/usr/local/insa/lustre-v4-XX-0-linux64/bin:/usr/local/insa/arm-ada/compilateur/gcc-arm-none-eabi/bin:/usr/local/insa/anaconda/bin:/usr/local/insa/bin:/usr/local/insa/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/insa/tina/bin:/snap/bin
+PATH = /usr/local/insa/shared/opam/default/bin:/usr/local/insa/lustre-v4-XX-0-linux64/bin:/usr/local/insa/arm-ada/compilateur/gcc-arm-none-eabi/bin:/usr/local/insa/anaconda/bin:/usr/local/insa/bin:/usr/local/insa/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/insa/tina/bin:/snap/bin
+# makefile (from 'Makefile', line 15)
+HOST_CC = gcc
+# makefile (from 'Makefile', line 26)
+XLD := /opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc
+# makefile (from 'Makefile', line 59)
+COMMON_HEADERS := target_prog/io.h target_prog/test_vectors.h target_prog/DWT.h target_prog/hal.h target_prog/MT_RNG.h
 # environment
 GPG_AGENT_INFO = /run/user/25012/gnupg/S.gpg-agent:0:1
+# makefile (from 'Makefile', line 24)
+XCC := /opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc
 # environment
-SESSION_MANAGER = local/insa-20157:@/tmp/.ICE-unix/1340,unix/insa-20157:/tmp/.ICE-unix/1340
+SESSION_MANAGER = local/insa-20154:@/tmp/.ICE-unix/1344,unix/insa-20154:/tmp/.ICE-unix/1344
+# makefile (from 'Makefile', line 35)
+PLATFORM_INCLUDES = $(addprefix -Itarget_prog/${PLATFORM}/, . CMSIS CMSIS/core CMSIS/device Legacy)
 # environment
 XDG_RUNTIME_DIR = /run/user/25012
 # environment
+WINDOWID = 54525959
+# makefile (from 'Makefile', line 61)
+COMMON_SRCS = DWT.c MT_RNG.c io.c
+# environment
 UBUNTU_MENUPROXY = 1
+# makefile (from 'Makefile', line 10)
+RANDCODE = $(shell python -c 'import numpy as np; print(str(np.random.randint(0,9999)).zfill(4));')
 # environment
 VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
+# makefile (from 'Makefile', line 52)
+FIRMWARE_ASM_SRCS = $(patsubst firmware/${FIRMWARE}/%, % , $(wildcard firmware/${FIRMWARE}/*.s))
+# makefile (from 'Makefile', line 43)
+XLDFLAGS := --specs=nano.specs --specs=nosys.specs -T target_prog/stm32f3/LinkerScript.ld
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -103,11 +133,11 @@ XDG_SESSION_DESKTOP = mate
 # environment
 SSH_AUTH_SOCK = /run/user/25012/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 105647
+R_LIBS_USER = ~/R/libs
 # automatic
 %F = $(notdir $%)
 # environment
-DISPLAY = :0
+DISPLAY = :0.0
 # environment
 GTK_IM_MODULE = ibus
 # environment
@@ -121,27 +151,41 @@ QT_QPA_PLATFORMTHEME = gtk2
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 1412
+SSH_AGENT_PID = 1416
 # environment
-PKG_CONFIG_PATH = /usr/local/insa/shared/opam/default/lib/pkgconfig:/usr/local/insa/shared/opam/default/lib/pkgconfig:
+PKG_CONFIG_PATH = /usr/local/insa/shared/opam/default/lib/pkgconfig:
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = MATE
 # environment
-GTK_MODULES = appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module:appmenu-gtk-module
+GTK_MODULES = appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module
 # environment
-MANPATH = /usr/local/man:/usr/local/share/man:/usr/share/man:/opt/man:/usr/X11R6/man:$LUSTRE_INSTALL/man:/usr/local/insa/shared/opam/default/man:/usr/local/insa/shared/opam/default/man
+MANPATH = /usr/local/man:/usr/local/share/man:/usr/share/man:/opt/man:/usr/X11R6/man:$LUSTRE_INSTALL/man:/usr/local/insa/shared/opam/default/man
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /home/imbergam
+# makefile (from 'Makefile', line 39)
+XCPUFLAGS := -mcpu=cortex-m4 -mthumb -mfloat-abi=soft
 # environment
 LD_LIBRARY_PATH = /usr/local/insa/lib:$LD_LIBRARY_PATH
+# makefile (from 'Makefile', line 38)
+XOPTFLAGS := -Os -g
+# makefile (from 'Makefile', line 16)
+HOST_CXX = g++
 # environment
-VSCODE_CODE_CACHE_PATH = /home/imbergam/.config/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /home/imbergam/.config/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
 LOGNAME = imbergam
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# makefile (from 'Makefile', line 33)
+PLATFORM_ASFLAGS := -DF_CPU=7372800
+# makefile (from 'Makefile', line 32)
+PLATFORM_CPPFLAGS := -DSTM32F303xC -DSTM32F3 -DSTM32 -DHAL_TYPE=HAL_stm32f3 -DPLATFORM=CW308_STM32F3 -DF_CPU=7372800UL
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -152,6 +196,10 @@ MAKE_VERSION := 4.2.1
 XDG_VTNR = 7
 # environment
 MAKELEVEL := 0
+# makefile (from 'Makefile', line 60)
+COMMON_INCLUDES := -Itarget_prog/
+# environment
+COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
 # default
@@ -159,7 +207,7 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # environment
-SHLVL = 0
+SHLVL = 1
 # environment
 COMPIZ_CONFIG_PROFILE = mate
 # environment
@@ -169,15 +217,25 @@ USER = imbergam
 # environment
 CAML_LD_LIBRARY_PATH = /usr/local/insa/shared/opam/default/lib/stublibs:/usr/local/lib/ocaml/4.08.1/stublibs:/usr/lib/ocaml/stublibs
 # makefile
-.DEFAULT_GOAL := 
+.DEFAULT_GOAL := all
 # environment
 XDG_CURRENT_DESKTOP = MATE
+# makefile (from 'Makefile', line 8)
+NAME = hardened-digicode
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
-# environment
-R_LIBS_USER = ~/R/libs
+# makefile (from 'Makefile', line 41)
+XASFLAGS := -I. -x assembler-with-cpp -fmessage-length=0 -ffunction-sections -DF_CPU=7372800
+# makefile (from 'Makefile', line 30)
+CPU := cortex-m4
+# makefile (from 'Makefile', line 64)
+PLATFORM_OBJECTS := build/stm32f3/hardened-digicode/stm32f3_hal.o build/stm32f3/hardened-digicode/stm32f3_hal_lowlevel.o build/stm32f3/hardened-digicode/stm32f3_sysmem.o
 # default
 MAKE_COMMAND := make
+# environment
+OLDPWD = /home/imbergam/Bureau/3A
+# makefile (from 'Makefile', line 55)
+FIRMWARE_ELF := bin/hardened-digicode.elf
 # default
 .VARIABLES := 
 # automatic
@@ -185,7 +243,7 @@ MAKE_COMMAND := make
 # environment
 XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
 # environment
-VSCODE_IPC_HOOK = /run/user/25012/vscode-26673dc3-1.67.1-main.sock
+VSCODE_IPC_HOOK = /run/user/25012/vscode-26673dc3-1.67.2-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
@@ -196,18 +254,40 @@ MFLAGS = -pqrR
 GRC_XTERM_EXECUTABLE = /usr/bin/xterm
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
+# makefile (from 'Makefile', line 40)
+XCPPFLAGS := -I. -DDEBUG -DSTM32F303xC -DSTM32F3 -DSTM32 -DHAL_TYPE=HAL_stm32f3 -DPLATFORM=CW308_STM32F3 -DF_CPU=7372800UL -DSS_VER_2_0=2 -DSS_VER_1_1=1 -DSS_VER_1_0=0
+# makefile (from 'Makefile', line 27)
+XOBJDUMP := /opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-objdump
 # environment
 GDK_BACKEND = x11
+# makefile (from 'Makefile', line 17)
+HOST_CFLAGS = -O2 -Wall
+# makefile (from 'Makefile', line 36)
+PLATFORM_LDSCRIPT = target_prog/${PLATFORM}/LinkerScript.ld
 # automatic
 +F = $(notdir $+)
+# makefile (from 'Makefile', line 25)
+XAS := /opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc
 # environment
 QT_ACCESSIBILITY = 1
+# makefile (from 'Makefile', line 42)
+XCFLAGS := -Wall -fmessage-length=0 -ffunction-sections -gdwarf-2 -funsigned-char -funsigned-bitfields -fshort-enums
+# makefile (from 'Makefile', line 31)
+PLATFORM := stm32f3
 # default
 MAKEFILES := 
+# makefile (from 'Makefile', line 18)
+HOST_CXXFLAGS = -O2 -Wall -std=c++11
 # automatic
 <F = $(notdir $<)
 # environment
 GRC_BLOCKS_PATH = /usr/local/share/gnuradio/grc/blocks:/usr/share/gnuradio/grc/blocks:/usr/local/insa/share/gnuradio/grc/blocks
+# makefile (from 'Makefile', line 46)
+XOBJDIR := build/stm32f3/hardened-digicode
+# makefile (from 'Makefile', line 54)
+FIRMWARE_OBJECTS := build/stm32f3/hardened-digicode/main.o build/stm32f3/hardened-digicode/verify_code.o
+# makefile (from 'Makefile', line 23)
+TRIPLE = /opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi
 # environment
 LC_ALL = C
 # environment
@@ -215,7 +295,10 @@ LUSTRE_INSTALL = /usr/local/insa/lustre-v4-XX-0-linux64
 # environment
 QT4_IM_MODULE = ibus
 # automatic
+ 
 ^F = $(notdir $^)
+# makefile (from 'Makefile', line 28)
+XOBJCOPY := /opt/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-objcopy
 # default
 SUFFIXES := 
 # environment
@@ -226,12 +309,18 @@ MATE_DESKTOP_SESSION_ID = this-is-deprecated
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # default
 .RECIPEPREFIX := 
+# makefile (from 'Makefile', line 62)
+COMMON_OBJECTS := build/stm32f3/hardened-digicode/DWT.o build/stm32f3/hardened-digicode/MT_RNG.o build/stm32f3/hardened-digicode/io.o
+# makefile (from 'Makefile', line 7)
+FIRMWARE = hardened-digicode
 # environment
 LANG = C
 # environment
-VSCODE_PID = 105647
+TERM = xterm-256color
+# environment
+VSCODE_PID = 7935
 # variable set hash-table stats:
-# Load=110/1024=11%, Rehash=0, Collisions=9/132=7%
+# Load=154/1024=15%, Rehash=0, Collisions=15/244=6%
 
 # Pattern-specific Variable Values
 
@@ -239,36 +328,189 @@ VSCODE_PID = 105647
 
 # Directories
 
-# . (device 62, inode 2951780249): 10 files, no impossibilities.
+# . (device 62, inode 2951780249): 14 files, no impossibilities.
+# firmware/hardened-digicode (device 62, inode 2883526896): 4 files, no impossibilities.
+# target_prog (device 62, inode 2883526899): 16 files, no impossibilities.
+# target_prog/stm32f3 (device 62, inode 2706246835): No files, no impossibilities so far.
 
-# 10 files, no impossibilities in 1 directories.
+# 34 files, no impossibilities in 4 directories.
 
 # Implicit Rules
 
-# No implicit rules.
+build/stm32f3/hardened-digicode/%.o: target_prog/%.c target_prog/io.h target_prog/test_vectors.h target_prog/DWT.h target_prog/hal.h target_prog/MT_RNG.h
+#  recipe to execute (from 'Makefile', line 74):
+	${XCC} ${PLATFORM_INCLUDES} ${COMMON_INCLUDES} ${XCFLAGS} ${XCPPFLAGS} ${XOPTFLAGS} ${XCPUFLAGS} -c $< -o $@
+
+build/stm32f3/hardened-digicode/%.o: target_prog/stm32f3/%.c
+#  recipe to execute (from 'Makefile', line 77):
+	${XCC} ${PLATFORM_INCLUDES} ${XCFLAGS} ${XCPPFLAGS} ${XOPTFLAGS} ${XCPUFLAGS} -c $< -o $@
+
+build/stm32f3/hardened-digicode/%.o: firmware/hardened-digicode/%.c target_prog/io.h target_prog/test_vectors.h target_prog/DWT.h target_prog/hal.h target_prog/MT_RNG.h
+#  recipe to execute (from 'Makefile', line 81):
+	${XCC} ${PLATFORM_INCLUDES} ${COMMON_INCLUDES} ${XCFLAGS} ${XCPPFLAGS} ${XOPTFLAGS} ${XCPUFLAGS} -c $< -o $@ -DCODE=$(RANDCODE)
+	
+	
+
+build/stm32f3/hardened-digicode/%.o: firmware/hardened-digicode/%.s
+#  recipe to execute (from 'Makefile', line 88):
+	${XAS} ${XASFLAGS} ${XCPUFLAGS} -c $< -o $@
+
+%.hex: %.elf
+#  recipe to execute (from 'Makefile', line 98):
+	${XOBJCOPY} -O ihex -R .eeprom -R .fuse -R .lock -R .signature $< $@
+
+%.lst: %.elf
+#  recipe to execute (from 'Makefile', line 101):
+	${XOBJDUMP} -d $< > $@
+
+# 6 implicit rules, 0 (0.0%) terminal.
 
 # Files
 
 # Not a target:
-all:
+build/stm32f3/hardened-digicode/MT_RNG.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/stm32f3/hardened-digicode/stm32f3_hal_lowlevel.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: builddir bin/hardened-digicode.elf bin/hardened-digicode.hex
 #  Command line target.
 #  Implicit rule search has been done.
 #  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+
+.PHONY: clean realclean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.PRECIOUS: build/stm32f3/hardened-digicode/%.o build/stm32f3/hardened-digicode/%.S build/stm32f3/hardened-digicode/stm32f3_startup.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/stm32f3/hardened-digicode/%.o:
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/stm32f3/hardened-digicode/io.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
+#  Last modified 2022-01-10 20:49:42
+#  File has been updated.
+#  Successfully updated.
+
+realclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 115):
+	-rm -Rf generated/
+	-rm -Rf ${TRACES_DIR}
+
+builddir:
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
-#  Failed to be updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := builddir
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/13=8%
+#  recipe to execute (from 'Makefile', line 71):
+	@mkdir -p ${XOBJDIR} ${XEXEDIR}
 
 # Not a target:
-makefile:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
+build/stm32f3/hardened-digicode/DWT.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+bin/hardened-digicode.hex:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+target_prog/stm32f3/stm32f3_startup.S:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/stm32f3/hardened-digicode/main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/stm32f3/hardened-digicode/stm32f3_sysmem.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bin/hardened-digicode.elf: build/stm32f3/hardened-digicode/stm32f3_startup.o build/stm32f3/hardened-digicode/stm32f3_hal.o build/stm32f3/hardened-digicode/stm32f3_hal_lowlevel.o build/stm32f3/hardened-digicode/stm32f3_sysmem.o build/stm32f3/hardened-digicode/DWT.o build/stm32f3/hardened-digicode/MT_RNG.o build/stm32f3/hardened-digicode/io.o build/stm32f3/hardened-digicode/main.o build/stm32f3/hardened-digicode/verify_code.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 94):
+	${XLD} ${XCPUFLAGS} -L${XOBJDIR}/ -o $@ ${XLDFLAGS} $< ${PLATFORM_OBJECTS} ${COMMON_OBJECTS} ${FIRMWARE_OBJECTS}
+
+# Not a target:
+build/stm32f3/hardened-digicode/%.S:
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/stm32f3/hardened-digicode/stm32f3_startup.o: target_prog/stm32f3/stm32f3_startup.S
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 91):
+	${XAS} ${XASFLAGS} ${XCPUFLAGS} -c $< -o $@
 
 # Not a target:
 .DEFAULT:
@@ -276,30 +518,43 @@ makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
- 
-make: *** No rule to make target 'all'.  Stop.
-
-GNUmakefile:
-#  Implicit rule search has been done.
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
 #  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 109):
+	-rm ${TOOLS} ${TOOLS_SRC_DIR}/*.o
+	-rm -f ${XEXEDIR}/*.elf ${XEXEDIR}/*.lst ${XEXEDIR}/*.hex ${XEXEDIR}/*.S
+	-rm -f ${XOBJDIR}/*.o
+	-rm -Rf idrorng/Idromel.egg-info/ idrorng/build/ idrorng/dist/
+
+# Not a target:
+build/stm32f3/hardened-digicode/stm32f3_hal.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/stm32f3/hardened-digicode/verify_code.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
+# Load=23/1024=2%, Rehash=0, Collisions=0/59=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 18 / storage = 210 B / avg = 11 B
-# current buf: size = 8162 B / used = 210 B / count = 18 / avg = 11 B
+# strcache buffers: 1 (0) / strings = 68 / storage = 1218 B / avg = 17 B
+# current buf: size = 8162 B / used = 1218 B / count = 68 / avg = 17 B
 
-# strcache performance: lookups = 21 / hit rate = 14%
+# strcache performance: lookups = 104 / hit rate = 34%
 # hash-table stats:
-# Load=18/8192=0%, Rehash=0, Collisions=1/21=5%
-# Finished Make data base on Fri May 13 15:17:07 2022
+# Load=68/8192=1%, Rehash=0, Collisions=3/104=3%
+# Finished Make data base on Fri May 20 16:14:14 2022
 
  
